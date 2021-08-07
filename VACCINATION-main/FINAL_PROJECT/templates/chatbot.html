@@ -1,0 +1,43 @@
+<html>
+  <header>
+  </header>
+  <body>
+        {% include "header.html" %}
+          <h1>Chat with Us!</h1>
+          <form action="/answer" method="POST">
+            <div>
+              <b>The VaxBuddies team compiled a few FAQs so that your concerns and apprehensions about the COVID-19 vaccines can be addressed efficiently!</b>
+              <br></br>
+              Please input the number that corresponds to your query:
+              <br></br>
+              1 - What are the usual symptoms after vaccination?
+              <br></br>
+              2 - How long after the second dose do I have to wait until I can go out?
+              <br></br>
+              3 - What if I lose my vaccination card?
+              <br></br>
+              4 - If I have already had COVID-19 and recovered, do I still need to get vaccinated?
+              <br></br>
+              5 - Is it safe for my child to get a COVID-19 vaccine?
+              <br></br>
+              6 - How long does protection from a COVID-19 vaccine last?
+              <br></br>
+              7 - How many doses of COVID-19 will I need?
+              <br></br>
+              8 - What is the link between COVID-19 vaccines and allergic reactions?
+              <br></br>
+              9 - How do we know that COVID-19 vaccines are safe?
+              <br></br>
+              10 - Should I take a blood thinner a few days before taking the vaccine, given reports of blood clotting caused by the vaccination?
+            </div>
+            <input type="text" name="question"></input>
+            <div>
+            <input type="submit" value="Ask!"/>
+            </div>
+            <br></br>
+            Sources: <a href="https://www.who.int/news-room/q-a-detail/coronavirus-disease-(covid-19)-vaccines-safety">WHO</a>,
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/faq.html">CDC</a>
+          </form>
+        {% include "footer.html" %}
+  </body>
+</html>

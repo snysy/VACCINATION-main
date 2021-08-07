@@ -1,0 +1,26 @@
+<html>
+  <header>
+    <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <style>
+      .footer {
+        font-size: 10px;
+      }
+    </style>
+  </header>
+  <body>
+    VaxBuddies |
+    <a href="/">Home</a> | <a href="/aboutus">About Us</a> |
+    <a href="/chatbot">Chat with us!</a> |
+    {% if session["user"] is defined %}
+    Welcome, {{ session["user"]["first_name"] }}.
+    <a href="/calendar">Calendar</a> |
+    <a href="/account">My Account</a> |
+    <a href="/logout">Logout</a>
+    {% else %}
+    <a href="/signup">Signup</a> |
+    <a href="/login">Login</a>
+    {% endif %}
+    <p/>

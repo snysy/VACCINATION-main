@@ -1,0 +1,17 @@
+<html>
+  <header>
+  </header>
+  <body>
+        {% include "header.html" %}
+          <h1>My Account</h1>
+          <table>
+            {% if session["user"] is defined %}
+              <tr><td><b>Organization: </b></td><td>{{ session["user"]["org"] }}</td></tr>
+              <tr><td><b>Vaccine Brand: </b></td><td>{{ session["user"]["brand"] }}</td></tr>
+              <tr><td><b>First Dose Date: </b></td><td>{{ session["user"]["first_dose"] }}</td></tr>
+              <tr><td><b>Second Dose Date: </b></td><td>{{ session["user"]["second_dose"] }}</td></tr>
+            {% endif %}
+          </table>
+        {% include "footer.html" %}
+  </body>
+</html>

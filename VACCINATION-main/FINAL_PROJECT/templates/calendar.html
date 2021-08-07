@@ -1,0 +1,72 @@
+<html>
+  <header>
+  </header>
+  <body>
+        {% include "header.html" %}
+        <h1>Calendar</h1>
+        {% if fd_days_left > 0 %}
+          <h3>You have {{ fd_days_left }} days until your first dose.</h3>
+        {% endif %}
+        {% if sd_days_left > 0 %}
+          <h3>You have {{ sd_days_left }} days until your second dose.</h3>
+        {% endif %}
+        {% if sd_days_left < 0  %}
+          <h3>Congratulations you are fully vaccinated!</h3>
+        {% endif %}
+        <br/>
+        <h4>Before</h4>
+        <ol>
+          <li>
+            If you haven’t taken your first dose yet, make sure you have proof of your appointment (if not walk-in) 
+            just in case the vaccination centre asks for it.
+          </li>
+          <li>
+            For your second dose, make sure you have your vaccination card with you before heading to the vaccination centre. 
+          </li>
+          <li>
+            Wear a mask and face shield.
+          </li>
+          <li>
+            Wear short or loose sleeves that can be easily rolled up for easier vaccination on the arm.
+          </li>
+          <li>
+            Avoid getting any other vaccination before your COVID-19 vaccination.
+          </li>
+          <li>
+            It’s important to tell your vaccinator if you have any existing health conditions or are on any medication.
+          </li>
+          <li>
+            Cancel your appointment if you happen to contract COVID-19 or are experiencing any symptoms. 
+            You can get vaccinated 14 days after the last day you experience the symptoms.
+          </li>
+        </ol>
+
+        <h4>During</h4>
+        <ol>
+          <li>
+            Remember to take deep and slow breaths during the injection, especially if you’re nervous or anxious.
+          </li>
+          <li>
+            Stay in the monitoring area for about 15-30 minutes to make sure you don’t experience any severe side effects. If you do feel unwell or have adverse reactions, the medical staff at the centre will be able to immediately take action.
+          </li>
+        </ol>
+        <h4>After</h4>
+        <ol>
+          <li>
+            Take paracetamol and other over-the-counter medication if necessary.
+          </li>
+          <li>
+            Apply a cold compress on the vaccinated arm if it feels sore and try not to do any strenuous activity with it.
+          </li>
+          <li>
+            If the symptoms last longer than a week or are quite severe, contact a health professional.
+          </li>
+          <li>
+            The side effects of the second dose are known to be more severe than that of the first dose, so it’s best to limit your physical activity during the days after.
+          </li>
+        </ol>
+        Source: <a href={{ source_url }} target="_blank">UNICEF</a>
+        
+        {% include "footer.html" %}
+  </body>
+</html>

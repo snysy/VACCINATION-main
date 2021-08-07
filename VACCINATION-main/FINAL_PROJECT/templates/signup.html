@@ -1,0 +1,43 @@
+{% include "header.html" %}
+<h1>Signup</h1>
+<h2>Start your vaccination journey with us today!</h2>
+<form action="/register" method="POST">
+  <div>
+    First Name
+  </div>
+  <input type="text" name="first_name"></input>
+  <div>
+    Last Name
+  </div>
+  <input type="text" name="last_name"></input>
+  <div>
+    Email Address
+  </div>
+  <input type="text" name="username"></input>
+  <div>
+    Password
+  </div>
+  <input type="password" name="password"></input>
+  <div>
+    First Dose Date (Ex: YYYY-MM-DD)
+    </div>
+    <input type="text" name="first_dose"></input>
+    <div>
+    Vaccine Organization
+  </div>
+  <input type="text" name="org"></input>
+  <div>
+    Vaccine Brand
+  </div>
+  <label for="vaccine">Choose a vaccine:</label>
+  <select name="vaccine" id="vaccine">
+    <option value="Sinovac">Sinovac</option>
+    <option value="AstraZeneca">AstraZeneca</option>
+    <option value="Pfizer">Pfizer</option>
+    <option value="Moderna">Moderna</option>
+  </select>
+  <div>
+  <input type="submit" value="Signup"/>
+  </div>
+</form>
+{% include "footer.html" %}

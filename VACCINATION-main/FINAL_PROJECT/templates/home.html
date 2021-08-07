@@ -1,0 +1,38 @@
+<html>
+  <header>
+  </header>
+  <body>
+        {% include "header.html" %}
+          <h1>Welcome to VaxBuddies!</h1>
+          <br></br>
+          <h3><b>What is COVID-19?</b></h3>
+          Coronavirus disease, more commonly known as COVID-19, is the most recently discovered coronavirus. It was first identified in December 31, 2019 in Wuhan City, China and has since spread around the globe.
+          On March 11, 2020, the World Health Organization (WHO) officially declared COVID-19 as a global pandemic due to the continuous rise in cases and deaths.
+          <br></br>
+          According to Centers for Disease Control and Prevention (CDC), symptoms include fever, cough, difficulty breathing, loss of taste or smell, sore throat, among others.
+          WHO also states that it is primarily spread through "droplets of saliva or discharge from the nose when an infected person coughs or sneezes."
+          The VaxBuddies team personally advises you to immediately self-isolate and get tested if you feel unwell or are experiencing any symptoms.
+          <br></br>
+          <h3><b>COVID-19 in the Philippines</b></h3>
+          Based on data presented by the Department of Health (DOH), there was a sudden surge in active COVID-19 cases in the Philippines during March 2021.
+          From aproximately 5,792 cases in December 24-30, 2020, we saw an increase to up to 52,940 cases during March 25-31, 2021.
+          As of August 3, 2021, there are 63,137 active cases with 1,521,263 recoveries and 28,141 deaths.
+          <br></br>
+          As a response to the growing issue of COVID-19, the Philippines was put into several lockdowns throughout the course of the pandemic, and with the onslaught of the new Delta variant, the government has announced that Metro Manila will be in lockdown again from August 6-20, 2021.
+          For more details and guidelines on the new lockdown, our team suggests reading this detailed <a href="https://www.rappler.com/nation/metro-manila-placed-under-ecq-august-6-to-20-2021">article</a> on Rappler.
+          <br></br>
+          <h3><b>How will vaccines help?</b></h3>
+          Vaccines are a great way to help not only yourself, but also your community from further spreading the virus. To put it simply, it helps your immune system recognize the foreign virus so that your body will produce antibodies to fight it. Thus, your immune system will be able to effectively and efficiently fight the virus if ever it enters your body.
+          <br></br>
+          In the Philippines, there are several vaccines available such as Sinovac, AstraZeneca, Moderna, among others. If you want to find out more about the efficacy levels of each vaccine brand, DOH gave a quick rundown in their <a href="https://doh.gov.ph/vaccines/what-is-the-efficacy-rate-of-each-available-vaccine">page</a>.
+          <br></br>
+          {% if session["user"] is not defined %}
+            <h5><a href="/signup">Join us</a> now to kickstart your vaccination journey!</h5>
+            <h5> Already have an account with us? <a href="/login">Login</a> so that we can help you directly!</h5>
+          {% endif %}
+          <br></br>
+          Sources: <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">WHO</a>, <a href="https://www.euro.who.int/en/health-topics/health-emergencies/coronavirus-covid-19/novel-coronavirus-2019-ncov#:~:text=On%2031%20December%202019%2C,2019%2DnCoV”.">WHO Europe</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">CDC</a>,
+          <a href="https://doh.gov.ph/2019-nCoV">DOH</a>
+        {% include "footer.html" %}
+  </body>
+</html>
